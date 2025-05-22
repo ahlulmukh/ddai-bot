@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "windows": {
+    "url": "https://github.com/ahlulmukh/ddai-bot/releases/download/v1.0.0/ddai-bot.exe",
+    "checksum": "023fcf90a02fe4ea35593428e8b411769a2b9136ebd09b5b1a42bb233843d496"
+  },
+  "linux": {
+    "amd64": {
+      "url": "https://github.com/ahlulmukh/ddai-bot/releases/download/v1.0.0/ddai-bot-amd64",
+      "checksum": "b5bcfd8589f7839e4f57db2124fd00a218114e1c1ff6def3352c7f351cdbfe34"
+    },
+    "arm64": {
+      "url": "https://github.com/ahlulmukh/ddai-bot/releases/download/v1.0.0/ddai-bot-arm64",
+      "checksum": "f9e1c4aede898d84c3bdbf4bee24c353642a9f98e18bf9510d399cc30809085a"
+    }
+  }
+}
