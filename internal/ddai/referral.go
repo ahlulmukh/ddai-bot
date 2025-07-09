@@ -213,7 +213,7 @@ func (m *ddaiReferral) registerAccount(email string, username string, password s
 		"Content-Type": "application/json",
 	}
 
-	body, err := m.httpClient.MakeRequestWithBody("POST", "https://auth.ddai.network/register", jsonData, headers)
+	body, err := m.httpClient.MakeRequestWithBody("POST", "https://auth.ddai.space/register", jsonData, headers)
 	if err != nil {
 		return fmt.Errorf("registration request failed: %v", err)
 	}
@@ -253,7 +253,7 @@ func (m *ddaiReferral) loginAccount(username string, password string, captcha st
 		"Content-Type": "application/json",
 	}
 
-	body, err := m.httpClient.MakeRequestWithBody("POST", "https://auth.ddai.network/login", jsonData, headers)
+	body, err := m.httpClient.MakeRequestWithBody("POST", "https://auth.ddai.space/login", jsonData, headers)
 	if err != nil {
 		return "", fmt.Errorf("login request failed: %v", err)
 	}
@@ -284,7 +284,7 @@ func (m *ddaiReferral) getUserTask(accessToken string) ([]map[string]string, err
 		"Authorization": "Bearer " + accessToken,
 	}
 
-	body, err := m.httpClient.MakeRequestWithBody("GET", "https://auth.ddai.network/missions", nil, headers)
+	body, err := m.httpClient.MakeRequestWithBody("GET", "https://auth.ddai.space/missions", nil, headers)
 	if err != nil {
 		return nil, fmt.Errorf("get tasks request failed: %v", err)
 	}
@@ -318,7 +318,7 @@ func (m *ddaiReferral) getUserTask(accessToken string) ([]map[string]string, err
 func (m *ddaiReferral) claimTask(accessToken string, task map[string]string) error {
 	utils.LogMessage(m.currentNum, m.total, fmt.Sprintf("Claiming task: %s (ID: %s)", task["name"], task["id"]), "process")
 
-	url := fmt.Sprintf("https://auth.ddai.network/missions/claim/%s", task["id"])
+	url := fmt.Sprintf("https://auth.ddai.space/missions/claim/%s", task["id"])
 
 	headers := map[string]string{
 		"Content-Type":  "application/json",
