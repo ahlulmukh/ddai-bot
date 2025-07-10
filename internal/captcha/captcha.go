@@ -32,7 +32,7 @@ func NewCaptchaServices() *CaptchaServices {
 	config := LoadConfig()
 	return &CaptchaServices{
 		sitekey:           "0x4AAAAAABdw7Ezbqw4v6Kr1",
-		pageUrl:           "https://app.ddai.network/",
+		pageUrl:           "https://app.ddai.space/",
 		cfSolved:          config.CaptchaServices.UrlPrivate + "/turnstiler",
 		antiCaptchaApiUrl: "https://api.anti-captcha.com",
 	}
@@ -74,7 +74,7 @@ func (cs *CaptchaServices) solvedPrivate(currentNum, total int) (string, error) 
 	utils.LogMessage(currentNum, total, "Trying to solved captcha cloudflare...", "process")
 
 	data := map[string]interface{}{
-		"url":     "https://app.ddai.network/",
+		"url":     "https://app.ddai.space/",
 		"siteKey": "0x4AAAAAABdw7Ezbqw4v6Kr1",
 		"mode":    "turnstile-min",
 	}

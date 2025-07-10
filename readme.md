@@ -4,7 +4,7 @@ Automated tool for DDAI Depin
 
 ## Requirements
 
-- **DDAI Account**: [Register on DDAI Network](https://app.ddai.network/register?ref=r9zs0fHw)
+- **DDAI Account**: [Register on DDAI Network](https://app.ddai.space/register?ref=r9zs0fHw)
 - **Proxy**: Optional, but recommended for multi-account management
 - **Captcha Service**: Configure in `config.json` (Private/2Captcha/AntiCaptcha)
 
